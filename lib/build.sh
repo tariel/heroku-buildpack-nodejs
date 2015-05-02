@@ -337,3 +337,10 @@ write_user_cache() {
     done
   fi
 }
+
+build_wintersmith() {
+  info "-----> Building Wintersmith site"
+  PATH="$HOME/bin:$HOME/node_modules/.bin:$PATH"
+  make heroku
+  info "Wintersmith site built" | indent
+end
