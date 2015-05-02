@@ -340,7 +340,9 @@ write_user_cache() {
 
 build_wintersmith() {
   info "-----> Building Wintersmith site"
-  PATH="$HOME/bin:$HOME/node_modules/.bin:$PATH"
+  echo "export PATH=\"\$HOME/.heroku/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $build_dir/.profile.d/nodejs.sh
+  echo "export NODE_HOME=\"\$HOME/.heroku/node\"" >> $build_dir/.profile.d/nodejs.sh
+  #PATH="$HOME/bin:$HOME/node_modules/.bin:$PATH"
   make heroku
   info "Wintersmith site built" | indent
 }

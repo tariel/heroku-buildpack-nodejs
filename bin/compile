@@ -56,7 +56,6 @@ install_npm
 head "Building dependencies"
 cd $build_dir
 build_dependencies
-build_wintersmith
 
 ####### Create a Procfile if possible
 
@@ -72,4 +71,5 @@ write_export
 clean_npm
 clean_cache
 create_cache
+build_wintersmith
 build_succeeded
