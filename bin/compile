@@ -71,5 +71,4 @@ write_export
 clean_npm
 clean_cache
 create_cache
-build_wintersmith
 build_succeeded
