@@ -343,4 +343,4 @@ build_wintersmith() {
   PATH="$HOME/bin:$HOME/node_modules/.bin:$PATH"
   make heroku
   info "Wintersmith site built" | indent
-end
+}
